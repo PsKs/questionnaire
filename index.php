@@ -32,7 +32,7 @@
       }
       input[type="radio"].showHide:checked ~ .reveal-if-active, input[type="checkbox"].showHide:checked ~ .reveal-if-active {
         opacity: 1;
-        max-height: 450px;
+        max-height: 500px;
         padding: 5px 0px 10px 20px;
         -webkit-transform: scale(1);
             -ms-transform: scale(1);
@@ -47,13 +47,12 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-    </script>
   </head>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/sisyphus.min.js"></script>
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content">
       <div class="container">
@@ -67,17 +66,17 @@
           <h4 class="panel-title">แบบสอบถาม</h4> 
         </div>
         <div class="panel-body">
-          <form method="post" action="index.php" name="A1">
+          <form method="post" action="index.php" id="A1" name="A1">
           <h4>ส่วนที่ 1 ข้อมูลทั่วไปเกี่ยวกับหน่วยงานตอบแบบสอบถาม</h4>
           <!-- 1 -->
           <div class="form-group">
             <label for="x1_open">1. สังกัดหน่วยงาน</label>
-            <input type="text" class="form-control" id="x1_open" placeholder="ชื่อหน่วยงาน">
+            <input type="text" class="form-control" name="x1_open" id="x1_open" placeholder="ชื่อหน่วยงาน">
           </div>
           <!-- 2 -->
           <div class="form-group">
             <label for="x2_open">2. ชื่อกลุ่มงาน หน่วยงาน</label>
-            <input type="text" class="form-control" id="x2_open" placeholder="ชื่อกลุ่มงาน">
+            <input type="text" class="form-control" name="x2_open" id="x2_open" placeholder="ชื่อกลุ่มงาน">
           </div><br/>
           <h4>ส่วนที่ 2 การดำเนินการด้านการควบคุมเครื่องดื่มแอลกอฮอล์</h4>
           <!-- 3 -->
@@ -342,5 +341,10 @@
         print_r($_POST);
       ?>
     </div>
+    <script type="text/javascript">
+      $( function() {
+        $( "#A1" ).sisyphus();
+      });
+    </script>
   </body>
 </html>
