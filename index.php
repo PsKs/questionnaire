@@ -32,14 +32,13 @@
       }
       input[type="radio"].showHide:checked ~ .reveal-if-active, input[type="checkbox"].showHide:checked ~ .reveal-if-active {
         opacity: 1;
-        max-height: 500px;
+        max-height: 400px;
         padding: 5px 0px 10px 20px;
         -webkit-transform: scale(1);
             -ms-transform: scale(1);
                 transform: scale(1);
         overflow: visible;
       }
-
     </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -48,6 +47,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
+  <script type="text/javascript">
+    
+  </script>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.2.min.js"></script>
@@ -63,10 +65,10 @@
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title">แบบสอบถาม</h4> 
+          <h4 class="panel-title">การรับรู้กระบวนการสร้างการมีส่วนรวมในการควบคุม และจัดการปัญหาการบริโภคเครื่องดื่มแอลกอฮอล์  รวมถึงการพัฒนาสื่อสาธารณะ ระดับจังหวัด</h4> 
         </div>
         <div class="panel-body">
-          <form method="post" action="index.php" id="A1" name="A1">
+          <form method="post" action="index.php" class="cmxform" id="A1" name="A1">
           <h4>ส่วนที่ 1 ข้อมูลทั่วไปเกี่ยวกับหน่วยงานตอบแบบสอบถาม</h4>
           <!-- 1 -->
           <div class="form-group">
@@ -263,44 +265,38 @@
             <div>
               <input type="radio" class="showHide" name="x10" id="x10.1" value="1"/> 1.  มี ในด้าน
               <label class="radio-inline"></label>
-              <div class="reveal-if-active">(ขอเอกสารแนบ)<br/>
+              <div class="reveal-if-active">
                 <div class="row">
-                  <input type="checkbox" name="x10_1" id="x10_1" value="1" onchange="document.getElementById('x10_1_open').disabled=!this.checked;"/> 1.1 บุคคลต้นแบบ
-                  <label class="checkbox-inline" for="x10_1"></label>
-                  <div class="col-xs-2">
+                  <div class="col-xs-3">
+                    <input type="checkbox" name="x10_1" id="x10_1" value="1" onchange="document.getElementById('x10_1_open').disabled=!this.checked;"/> 1.1 บุคคลต้นแบบ
+                    <label class="checkbox-inline" for="x10_1"></label>
                     <input type="text" class="form-control" id="x10_1_open" name="x10_1_open" placeholder="จำนวน (คน)" disabled/>
                   </div>
-                </div>
-                <div class="row">
-                  <input type="checkbox" name="x10_2" id="x10_2" value="1" onchange="document.getElementById('x10_2_open').disabled=!this.checked;"/> 1.2 ครอบครัวต้นแบบ
-                  <label class="checkbox-inline" for="x10_2"></label>
-                  <div class="col-xs-2">
+                  <div class="col-xs-3">
+                    <input type="checkbox" name="x10_2" id="x10_2" value="1" onchange="document.getElementById('x10_2_open').disabled=!this.checked;"/> 1.2 ครอบครัวต้นแบบ
+                    <label class="checkbox-inline" for="x10_2"></label>
                     <input type="text" class="form-control" id="x10_2_open" name="x10_2_open" placeholder="จำนวน (ครอบครัว)" disabled/>
                   </div>
-                </div>
-                <div class="row">
-                  <input type="checkbox" name="x10_3" id="x10_3" value="1" onchange="document.getElementById('x10_3_open').disabled=!this.checked;"/> 1.3 ชุมชนต้นแบบ
-                  <label class="checkbox-inline" for="x10_3"></label>
-                  <div class="col-xs-2">
+                  <div class="col-xs-3">
+                    <input type="checkbox" name="x10_3" id="x10_3" value="1" onchange="document.getElementById('x10_3_open').disabled=!this.checked;"/> 1.3 ชุมชนต้นแบบ
+                    <label class="checkbox-inline" for="x10_3"></label>
                     <input type="text" class="form-control" id="x10_3_open" name="x10_3_open" placeholder="จำนวน (ชุมชน)" disabled/>
                   </div>
                 </div>
                 <div class="row">
-                  <input type="checkbox" name="x10_4" id="x10_4" value="1" onchange="document.getElementById('x10_4_open').disabled=!this.checked;"/> 1.4 สถาบันการศึกษาต้นแบบ
-                  <label class="checkbox-inline" for="x10_4"></label>
-                  <div class="col-xs-2">
+                  <div class="col-xs-3">
+                    <input type="checkbox" name="x10_4" id="x10_4" value="1" onchange="document.getElementById('x10_4_open').disabled=!this.checked;"/> 1.4 สถาบันการศึกษาต้นแบบ
+                    <label class="checkbox-inline" for="x10_4"></label>
                     <input type="text" class="form-control" id="x10_4_open" name="x10_4_open" placeholder="จำนวน (สถาบัน)" disabled/>
                   </div>
-                </div>
-                <div class="row">
-                  <input type="checkbox" name="x10_5" id="x10_5" value="1" onchange="document.getElementById('x10_5_open').disabled=!this.checked;"/> 1.5 อื่นๆ ระบุ
-                  <label class="checkbox-inline" for="x10_5"></label>
-                  <div class="col-xs-2">
+                  <div class="col-xs-3">
+                    <input type="checkbox" name="x10_5" id="x10_5" value="1" onchange="document.getElementById('x10_5_open').disabled=!this.checked;"/> 1.5 อื่นๆ ระบุ
+                    <label class="checkbox-inline" for="x10_5"></label>
                     <input type="text" class="form-control" id="x10_5_open" name="x10_5_open" disabled/>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="exampleInputFile">File input</label>
+                  <label for="exampleInputFile">(ขอเอกสารแนบ)</label>
                   <input type="file" id="exampleInputFile">
                   <p class="help-block">PDF หรือ JPEG</p>
                 </div>
@@ -342,8 +338,9 @@
       ?>
     </div>
     <script type="text/javascript">
-      $( function() {
-        $( "#A1" ).sisyphus();
+      $(function() {
+        $("#A1").sisyphus();
+        autoRelease: true;
       });
     </script>
   </body>
