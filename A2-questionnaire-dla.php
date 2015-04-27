@@ -12,34 +12,7 @@
     <title></title>
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      .reveal-if-active {
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        -webkit-transform: scale(0.8);
-            -ms-transform: scale(0.8);
-                transform: scale(0.8);
-        -webkit-transition: 0.5s;
-                transition: 0.5s;
-      }
-      .reveal-if-active label {
-        display: block;
-        margin: 0 0 3px 0;
-      }
-      .reveal-if-active input[type=text] {
-        width: 100%;
-      }
-      input[type="radio"].showHide:checked ~ .reveal-if-active, input[type="checkbox"].showHide:checked ~ .reveal-if-active {
-        opacity: 1;
-        max-height: 400px;
-        padding: 5px 0px 10px 20px;
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-                transform: scale(1);
-        overflow: visible;
-      }
-    </style>
+    <link href="css/default.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,14 +20,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <script type="text/javascript">
-    
-  </script>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sisyphus.min.js"></script>
+    <script src="js/ctrl.js"></script>
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content">
       <div class="container">
@@ -65,10 +36,10 @@
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h4 class="panel-title"><p>การรับรู้กระบวนการสร้างการมีส่วนรวมในการควบคุม และจัดการปัญหาการบริโภคเครื่องดื่มแอลกอฮอล์</p><p>รวมถึงการพัฒนาสื่อสาธารณะ ระดับองค์กรปกครองส่วนท้องถิ่น</p></h4> 
+          <h4 class="panel-title"><p>การรับรู้กระบวนการสร้างการมีส่วนรวมในการควบคุม และจัดการปัญหาการบริโภคเครื่องดื่มแอลกอฮอล์</p>รวมถึงการพัฒนาสื่อสาธารณะ ระดับองค์กรปกครองส่วนท้องถิ่น</h4> 
         </div>
         <div class="panel-body">
-          <form method="post" action="A2-control-dla.php" class="cmxform" id="A1" name="A1">
+          <form method="post" action="A2-questionnaire-dla.php" class="form" id="form" name="form">
           <h4>ส่วนที่ 1 ข้อมูลทั่วไปเกี่ยวกับหน่วยงานตอบแบบสอบถาม</h4>
           <!-- 1 -->
           <div class="form-group">
@@ -97,7 +68,7 @@
           <div class="form-group">
             <label>4. องค์กรปกครองส่วนท้องถิ่น มีอำนาจในการจัดเก็บค่าธรรมเนียมใบอนุญาตจำหน่ายเครื่องดื่มแอลกอฮอล์ในพื้นที่ หรือไม่</label>
             <div>
-              <input type="radio" name="x4" id="x4.1" value="1"/> 1. มี โดยวิธีใด
+              <input type="radio" name="x4" id="x4.1" value="1"/> 1. มี
               <label class="radio-inline"></label>
             </div>
             <div>
@@ -111,7 +82,7 @@
             <div>
               <input type="radio" class="showHide" name="x5" id="x5.1" value="1"/> 1. มี
               <label class="radio-inline"></label>
-              <div class="reveal-if-active">(ตอบได้มากกว่า 1 ข้อ)<br/>
+              <div class="reveal-if-active">(เลือกได้มากกว่า 1 ข้อ)<br/>
                 <input type="checkbox" name="x5_1" id="x5_1" value="1"/> 1.1 คำสั่ง/ประกาศ
                 <label class="checkbox-inline" for="x5_1"></label>
                 <input type="checkbox" name="x5_2" id="x5_2" value="1"/> 1.2 ผู้นำของท้องถิ่น เป็นแบบอย่างในการไม่ดื่มแอลกอฮอล์
@@ -136,7 +107,7 @@
             <div>
               <input type="radio" class="showHide" name="x6" id="x6.1" value="1"/> 1. มี
               <label class="radio-inline"></label>
-              <div class="reveal-if-active">(ตอบได้มากกว่า 1 ข้อ)<br/>
+              <div class="reveal-if-active">(เลือกได้มากกว่า 1 ข้อ)<br/>
                 <input type="checkbox" name="x6_1" id="x6_1" value="1"/> 1.1 คำสั่งแต่งตั้งคณะกรรมการควบคุมเครื่องดื่มแอลกอฮอล์ระดับอำเภอ
                 <label class="checkbox-inline" for="x6_1"></label>
                 <input type="checkbox" name="x6_2" id="x6_2" value="1"/> 1.2 คำสั่งแต่งตั้งชุดเฉพาะกิจตรวจเตือน ตรวจจับ/พนักงานเจ้าหน้าที่เฉพาะกิจเพื่อปฏิบัติการออกตรวจสอบ กวดขัน/นิเทศติดตามการดำเนินงานเฝ้าระวังและบังคับใช้กฎหมาย
@@ -167,7 +138,7 @@
           <div class="form-group">
             <label>8. อปท. ของท่านมีการมอบรางวัลต้นแบบการไม่ดื่มเครื่องดื่มแอลกอฮอล์ที่ได้รับการยกย่องเชิดชู หรือไม่</label>
             <div>
-              <input type="radio" class="showHide" name="x8" id="x8.1" value="1"/> 1.  มี ในด้าน
+              <input type="radio" class="showHide" name="x8" id="x8.1" value="1"/> 1. มี ในด้าน
               <label class="radio-inline"></label>
               <div class="reveal-if-active">
                 <div class="row">
@@ -241,11 +212,5 @@
         print_r($_POST);
       ?>
     </div>
-    <script type="text/javascript">
-      $(function() {
-        $("#A1").sisyphus();
-        autoRelease: true;
-      });
-    </script>
   </body>
 </html>

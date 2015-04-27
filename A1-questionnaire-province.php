@@ -12,34 +12,7 @@
     <title></title>
     <!-- Bootstrap CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      .reveal-if-active {
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        -webkit-transform: scale(0.8);
-            -ms-transform: scale(0.8);
-                transform: scale(0.8);
-        -webkit-transition: 0.5s;
-                transition: 0.5s;
-      }
-      .reveal-if-active label {
-        display: block;
-        margin: 0 0 3px 0;
-      }
-      .reveal-if-active input[type=text] {
-        width: 100%;
-      }
-      input[type="radio"].showHide:checked ~ .reveal-if-active, input[type="checkbox"].showHide:checked ~ .reveal-if-active {
-        opacity: 1;
-        max-height: 400px;
-        padding: 5px 0px 10px 20px;
-        -webkit-transform: scale(1);
-            -ms-transform: scale(1);
-                transform: scale(1);
-        overflow: visible;
-      }
-    </style>
+    <link href="css/default.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,14 +20,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <script type="text/javascript">
-    
-  </script>
   <body>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/sisyphus.min.js"></script>
+    <script src="js/ctrl.js"></script>
     <!-- Docs page layout -->
     <div class="bs-docs-header" id="content">
       <div class="container">
@@ -68,7 +39,7 @@
           <h4 class="panel-title">การรับรู้กระบวนการสร้างการมีส่วนรวมในการควบคุม และจัดการปัญหาการบริโภคเครื่องดื่มแอลกอฮอล์  รวมถึงการพัฒนาสื่อสาธารณะ ระดับจังหวัด</h4> 
         </div>
         <div class="panel-body">
-          <form method="post" action="index.php" class="cmxform" id="A1" name="A1">
+          <form method="post" action="A1-questionnaire-province.php" class="form" id="form" name="form">
           <h4>ส่วนที่ 1 ข้อมูลทั่วไปเกี่ยวกับหน่วยงานตอบแบบสอบถาม</h4>
           <!-- 1 -->
           <div class="form-group">
@@ -87,7 +58,7 @@
             <div>
               <input type="radio" class="showHide" name="x3" id="x3.1" value="1"/> 1. มี
               <label class="radio-inline"></label>
-              <div class="reveal-if-active">(ตอบได้มากกว่า 1 ข้อ)<br/>
+              <div class="reveal-if-active">(เลือกได้มากกว่า 1 ข้อ)<br/>
                 <input type="checkbox" name="x3_1" id="x3_1" value="1"/> 1.1 คำสั่ง/ประกาศ
                 <label class="checkbox-inline" for="x3_1"></label>
                 <input type="checkbox" name="x3_2" id="x3_2" value="1"/> 1.2 ผู้นำของจังหวัด เป็นแบบอย่างในการไม่ดื่มแอลกอฮอล์
@@ -112,7 +83,7 @@
             <div>
               <input type="radio" class="showHide" name="x4" id="x4.1" value="1"/> 1. มี โดยวิธีใด
               <label class="radio-inline"></label>
-              <div class="reveal-if-active">(ตอบได้มากกว่า 1 ข้อ)<br/>
+              <div class="reveal-if-active">(เลือกได้มากกว่า 1 ข้อ)<br/>
                 <input type="checkbox" name="x4_1" id="x4_1" value="1"/> 1.1 ให้เป็นวาระหนึ่งของการประชุมจังหวัด
                 <label class="checkbox-inline" for="x4_1"></label>
                 <input type="checkbox" name="x4_2" id="x4_2" value="1"/> 1.2 จัดกิจกรรม/ประชาสัมพันธ์ การรณรงค์การควบคุมเครื่องดื่มแอลกอฮอล์
@@ -137,7 +108,7 @@
             <div>
               <input type="radio" class="showHide" name="x5" id="x5.1" value="1"/> 1. มี
               <label class="radio-inline"></label>
-              <div class="reveal-if-active">(ตอบได้มากกว่า 1 ข้อ)<br/>
+              <div class="reveal-if-active">(เลือกได้มากกว่า 1 ข้อ)<br/>
                 <input type="checkbox" name="x5_1" id="x5_1" value="1"/> 1.1 อาศัยคำสั่ง/ประกาศ จากจังหวัด
                 <label class="checkbox-inline" for="x5_1"></label>
                 <input type="checkbox" name="x5_2" id="x5_2" value="1"/> 1.2 อาศัยคำสั่ง/ประกาศ จากหน่วยงานต้นสังกัด
@@ -176,7 +147,7 @@
           </div>
           <!-- 7 -->
           <div class="form-group">
-            <label>7. หน่วยงานของท่าน มีการสื่อสารสาธารณะไปยังประชาชน หรือหน่วยงานที่เกี่ยวข้อง ในเรื่องผลกระทบของเครื่องดื่มแอลกอฮอล์ โดยวิธีการใด (ตอบได้มากกว่า 1 ข้อ)</label>
+            <label>7. หน่วยงานของท่าน มีการสื่อสารสาธารณะไปยังประชาชน หรือหน่วยงานที่เกี่ยวข้อง ในเรื่องผลกระทบของเครื่องดื่มแอลกอฮอล์ โดยวิธีการใด (เลือกได้มากกว่า 1 ข้อ)</label>
             <div>
               <input type="checkbox" name="x7_1" id="x7_1" value="1"/> 1. นำเสนอผ่านเวทีวิชาการทั้งที่เป็นทางการและไม่เป็นทางการ
               <label class="checkbox-inline" for="x7_1"></label><br/>
@@ -186,7 +157,7 @@
               <label class="checkbox-inline" for="x7_3"></label><br/>
               <input type="checkbox" name="x7_4" id="x7_4" value="1"/> 4. รายงานความรู้จากการวิจัย
               <label class="checkbox-inline" for="x7_4"></label><br/>
-              <input type="checkbox" class="showHide" name="x7_5" id="x7_5" value="1"/> 5. รับรู้ผ่านช่องทางสื่อ (ตอบได้มากกว่า 1 ข้อ)
+              <input type="checkbox" class="showHide" name="x7_5" id="x7_5" value="1"/> 5. รับรู้ผ่านช่องทางสื่อ (เลือกได้มากกว่า 1 ข้อ)
               <label class="checkbox-inline" for="x7_5"></label><br/>
               <div class="reveal-if-active">
                 <input type="checkbox" name="x7_5_1" id="x7_5_1" value="1"/> 5.1 หนังสือพิมพ์
@@ -213,7 +184,7 @@
             <div>
               <input type="radio" class="showHide" name="x8" id="x8.1" value="1"/> 1. ได้รับ พัฒนาศักยภาพด้าน
               <label class="radio-inline"></label>
-              <div class="reveal-if-active">(ตอบได้มากกว่า 1 ข้อ)<br/>
+              <div class="reveal-if-active">(เลือกได้มากกว่า 1 ข้อ)<br/>
                 <input type="checkbox" name="x8_1" id="x8_1" value="1"/> 1.1 ด้านกฎหมายควบคุมเครื่องดื่มแอลกอฮอล์
                 <label class="checkbox-inline" for="x8_1"></label>
                 <input type="checkbox" name="x8_2" id="x8_2" value="1"/> 1.2 ด้านแกนนำเยาวชน
@@ -240,7 +211,7 @@
             <div>
               <input type="radio" class="showHide" name="x9" id="x9.1" value="1"/> 1. มี ใช้ประโยชน์ด้าน
               <label class="radio-inline"></label>
-              <div class="reveal-if-active">(ตอบได้มากกว่า 1 ข้อ)<br/>
+              <div class="reveal-if-active">(เลือกได้มากกว่า 1 ข้อ)<br/>
                 <input type="checkbox" name="x9_1" id="x9_1" value="1"/> 1.1 สืบหา สืบค้น
                 <label class="checkbox-inline" for="x9_1"></label>
                 <input type="checkbox" name="x9_2" id="x9_2" value="1"/> 1.2 วางแผนการดำเนินงาน ครั้งต่อไป
@@ -337,11 +308,5 @@
         print_r($_POST);
       ?>
     </div>
-    <script type="text/javascript">
-      $(function() {
-        $("#A1").sisyphus();
-        autoRelease: true;
-      });
-    </script>
   </body>
 </html>
