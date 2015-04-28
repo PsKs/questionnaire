@@ -39,7 +39,7 @@
           <h4 class="panel-title"><p>การรับรู้กระบวนการสร้างการมีส่วนรวมในการควบคุม และจัดการปัญหาการบริโภคเครื่องดื่มแอลกอฮอล์</p>รวมถึงการพัฒนาสื่อสาธารณะ ระดับองค์กรปกครองส่วนท้องถิ่น</h4> 
         </div>
         <div class="panel-body">
-          <form method="post" action="A2-questionnaire-dla.php" class="form" id="form" name="form">
+          <form method="post" action="lib/store_A2.php" class="form" id="form" name="form">
           <h4>ส่วนที่ 1 ข้อมูลทั่วไปเกี่ยวกับหน่วยงานตอบแบบสอบถาม</h4>
           <!-- 1 -->
           <div class="form-group">
@@ -143,26 +143,26 @@
               <div class="reveal-if-active">
                 <div class="row">
                   <div class="col-xs-3">
-                    <input type="checkbox" name="x8_1" id="x8_1" value="1" onchange="document.getElementById('x8_1_open').disabled=!this.checked;"/> 1.1 บุคคลต้นแบบ
+                    <input type="checkbox" name="x8_1" id="x8_1" value="1" onchange="document.getElementById('x8_1_number').disabled=!this.checked;"/> 1.1 บุคคลต้นแบบ
                     <label class="checkbox-inline" for="x8_1"></label>
-                    <input type="text" class="form-control" id="x8_1_open" name="x8_1_open" placeholder="จำนวน (คน)" disabled/>
+                    <input type="text" class="form-control" id="x8_1_number" name="x8_1_number" placeholder="จำนวน (คน)" disabled/>
                   </div>
                   <div class="col-xs-3">
-                    <input type="checkbox" name="x8_2" id="x8_2" value="1" onchange="document.getElementById('x8_2_open').disabled=!this.checked;"/> 1.2 ครอบครัวต้นแบบ
+                    <input type="checkbox" name="x8_2" id="x8_2" value="1" onchange="document.getElementById('x8_2_number').disabled=!this.checked;"/> 1.2 ครอบครัวต้นแบบ
                     <label class="checkbox-inline" for="x8_2"></label>
-                    <input type="text" class="form-control" id="x8_2_open" name="x8_2_open" placeholder="จำนวน (ครอบครัว)" disabled/>
+                    <input type="text" class="form-control" id="x8_2_number" name="x8_2_number" placeholder="จำนวน (ครอบครัว)" disabled/>
                   </div>
                   <div class="col-xs-3">
-                    <input type="checkbox" name="x8_3" id="x8_3" value="1" onchange="document.getElementById('x8_3_open').disabled=!this.checked;"/> 1.3 ชุมชนต้นแบบ
+                    <input type="checkbox" name="x8_3" id="x8_3" value="1" onchange="document.getElementById('x8_3_number').disabled=!this.checked;"/> 1.3 ชุมชนต้นแบบ
                     <label class="checkbox-inline" for="x8_3"></label>
-                    <input type="text" class="form-control" id="x8_3_open" name="x8_3_open" placeholder="จำนวน (ชุมชน)" disabled/>
+                    <input type="text" class="form-control" id="x8_3_number" name="x8_3_number" placeholder="จำนวน (ชุมชน)" disabled/>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-3">
-                    <input type="checkbox" name="x8_4" id="x8_4" value="1" onchange="document.getElementById('x8_4_open').disabled=!this.checked;"/> 1.4 สถาบันการศึกษาต้นแบบ
+                    <input type="checkbox" name="x8_4" id="x8_4" value="1" onchange="document.getElementById('x8_4_number').disabled=!this.checked;"/> 1.4 สถาบันการศึกษาต้นแบบ
                     <label class="checkbox-inline" for="x8_4"></label>
-                    <input type="text" class="form-control" id="x8_4_open" name="x8_4_open" placeholder="จำนวน (สถาบัน)" disabled/>
+                    <input type="text" class="form-control" id="x8_4_number" name="x8_4_number" placeholder="จำนวน (สถาบัน)" disabled/>
                   </div>
                   <div class="col-xs-3">
                     <input type="checkbox" name="x8_5" id="x8_5" value="1" onchange="document.getElementById('x8_5_open').disabled=!this.checked;"/> 1.5 อื่นๆ ระบุ
@@ -208,9 +208,6 @@
       </div>
     </div>
     <div class="col-md-10 col-md-offset-1">
-      <?php
-        print_r($_POST);
-      ?>
     </div>
   </body>
 </html>

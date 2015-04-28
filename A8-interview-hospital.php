@@ -39,7 +39,7 @@
           <h4 class="panel-title">สถานบริการสาธารณสุขด้านการดูแลผู้ที่มีปัญหาการดื่มสุรา</h4> 
         </div>
         <div class="panel-body">
-          <form method="post" action="A8-interview-hospital.php" class="form" id="form" name="form">
+          <form method="post" action="lib/store_A8.php" class="form" id="form" name="form">
           <h4>ส่วนที่ 1 ข้อมูลทั่วไปเกี่ยวกับหน่วยงานตอบแบบสอบถาม</h4>
           <!-- 1 -->
           <div class="form-group">
@@ -237,7 +237,7 @@
           </div>
           <!-- 7 -->
           <div class="form-group">
-            <label>7. หน่วยงานมีบุคลากรที่เคยผ่านการอบรมการดูแลผู้มีปัญหาการดื่มสุราหรือไม่่</label>
+            <label>7. หน่วยงานมีบุคลากรที่เคยผ่านการอบรมการดูแลผู้มีปัญหาการดื่มสุราหรือไม่</label>
             <div>
               <input type="radio" name="x7" id="x7.2" value="1"/> 1. ไม่มี
               <label class="radio-inline"></label>
@@ -301,7 +301,7 @@
               <div class="col-xs-5">
                 <input type="radio" name="x9" id="x9.2" value="2" onchange="document.getElementById('x9_number').disabled=!this.checked;"/> 2. มี
                 <label class="radio-inline"></label>
-                <input type="text" class="form-control" id="x9_number" name="x9_number" disabled/>
+                <input type="text" class="form-control" id="x9_number" name="x9_number" placeholder="จำนวน (คน)" disabled/>
               </div>
             </div>
           </div>
@@ -369,9 +369,6 @@
       </div>
     </div>
     <div class="col-md-10 col-md-offset-1">
-      <?php
-        print_r($_POST);
-      ?>
     </div>
   </body>
 </html>

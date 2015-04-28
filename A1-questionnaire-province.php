@@ -39,7 +39,7 @@
           <h4 class="panel-title">การรับรู้กระบวนการสร้างการมีส่วนรวมในการควบคุม และจัดการปัญหาการบริโภคเครื่องดื่มแอลกอฮอล์  รวมถึงการพัฒนาสื่อสาธารณะ ระดับจังหวัด</h4> 
         </div>
         <div class="panel-body">
-          <form method="post" action="A1-questionnaire-province.php" class="form" id="form" name="form">
+          <form method="post" action="lib/store_A1.php" class="form" id="form" name="form">
           <h4>ส่วนที่ 1 ข้อมูลทั่วไปเกี่ยวกับหน่วยงานตอบแบบสอบถาม</h4>
           <!-- 1 -->
           <div class="form-group">
@@ -304,9 +304,6 @@
       </div>
     </div>
     <div class="col-md-10 col-md-offset-1">
-      <?php
-        print_r($_POST);
-      ?>
     </div>
   </body>
 </html>
