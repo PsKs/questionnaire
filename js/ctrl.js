@@ -2,7 +2,7 @@ $(function() {
   $('#form').sisyphus();
   // autoRelease: true;
 });
-$(document).on("click", 'input:radio', function(e) {
+$(document).on('click', 'input:radio', function(e) {
   var name  = $(this).attr('name');
   var value = $(this).val();
   var choose = name+'_'+value+'_open';
@@ -15,6 +15,6 @@ $(document).on("click", 'input:radio', function(e) {
     }
   }
 });
-$(document).on("click", 'button:reset', function(e) {
+$(document).on('click', 'button:reset', function(e) {
   autoRelease: true;
 });
